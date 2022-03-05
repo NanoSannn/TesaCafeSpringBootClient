@@ -2,13 +2,12 @@
 <div class="box-add container mt-4 p-5 w-50" >
     <h1>Add favoriteDrinks</h1>
     <hr class="mb-4">
-    <form >
+    <form [formGroup]="CustomerForm">
         <div class="mb-3">
             <label class="form-label">DrinkName</label>
             <select class="form-select" formControlName="drinkName" >
-                <option selected value="Hot">คาปูชิโน</option>
-                <option value="cool">ลาเต้</option>
-                <option value="blended">กาแฟดำ</option>
+                <!-- <option selected value="#"></option> -->
+                <option *ngFor= "let d of drink" value="{{ d.name }}">{{ d.name }}</option>
             </select>
         </div>
         <div class="mb-3">
@@ -21,7 +20,7 @@
         </div>
         <hr>
         <div class="d-flex justify-content-center">
-            <button type="button"  class=" btn-info">Save</button>
+            <button type="button" (click)="addFavoriteDrinks(id)" class=" btn-info">Save</button>
         </div>
     </form>
 </div>

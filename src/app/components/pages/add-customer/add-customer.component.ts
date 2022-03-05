@@ -21,7 +21,7 @@ export class AddCustomerComponent implements OnInit {
     this.CustomerForm = new FormGroup({
       name: new FormControl(),
       email: new FormControl(),
-      tel_phone: new FormControl(),
+      tel: new FormControl(),
     });
   }
 
@@ -29,7 +29,7 @@ export class AddCustomerComponent implements OnInit {
     let customer = {
       name:this.CustomerForm.value.name,
       email: this.CustomerForm.value.email,
-      tel_phone: this.CustomerForm.value.tel_phone,
+      tel: this.CustomerForm.value.tel,
     }
     this.service.addCustomer(customer).subscribe((res)=>{
       console.log(res);
