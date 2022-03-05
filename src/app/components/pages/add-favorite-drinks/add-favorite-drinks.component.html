@@ -1,0 +1,27 @@
+
+<div class="box-add container mt-4 p-5 w-50" >
+    <h1>Add favoriteDrinks</h1>
+    <hr class="mb-4">
+    <form >
+        <div class="mb-3">
+            <label class="form-label">DrinkName</label>
+            <select class="form-select" formControlName="drinkName" >
+                <option selected value="Hot">คาปูชิโน</option>
+                <option value="cool">ลาเต้</option>
+                <option value="blended">กาแฟดำ</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">DrinkType</label>
+            <select class="form-select" formControlName="drinkType">
+                <option selected value="Hot">Hot</option>
+                <option value="cool">cool</option>
+                <option value="blended">blended</option>
+            </select>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-center">
+            <button type="button"  class=" btn-info">Save</button>
+        </div>
+    </form>
+</div>
